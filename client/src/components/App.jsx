@@ -7,12 +7,12 @@ class App extends React.Component {
     super(props);
     this.state = {
       movies: [],
-      found: []
+      search: []
     }
   }
   onSubmit() {
-    // clear list
-    // display all matches (or partial matches) to the title
+    // listen to input (change state)
+    // change state to
   }
   render() {
     return (
@@ -20,7 +20,9 @@ class App extends React.Component {
         <h2>MovieList</h2>
           <input id="search-bar"></input>
           <button id="go">Go!</button>
-          <div id="movie-list"><MovieList movies={movies}/></div>
+          <div>
+            <MovieList movies={movies}/>
+          </div>
       </div>
     );
   }
