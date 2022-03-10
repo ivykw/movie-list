@@ -1,14 +1,18 @@
 import React from 'react';
-import Move from './Movie';
+import Movie from './Movie.jsx';
 
 var MovieList = ({movies}) => {
-  return (
-    <div id="movie-list">
-      {movies.map(movie =>
-        <Movie movie = {movie}/>
-      )}
-    </div>
-  )
+  if (movies.length < 1) {
+    return 'No movies found';
+  } else {
+    return (
+      <div id="movie-list">
+        {movies.map(movie =>
+          <Movie movie = {movie}/>
+        )}
+      </div>
+    )
+  }
 };
 
 export default MovieList;
